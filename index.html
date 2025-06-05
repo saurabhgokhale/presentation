@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Time Travel Presentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Google Fonts: Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- impress.js base styles (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress-demo.css">
+    <style>
+        :root{ --accent:#00d1ff; }
+        html,body{ height:100%; margin:0; font-family:'Open Sans',Helvetica,Arial,sans-serif; background:radial-gradient(circle at 50% 20%, #12171f 0%, #0a0d13 80%); color:#fff; }
+        h1{ font-size:3.5rem; font-weight:700; letter-spacing:1px; margin:0 0 .6rem; text-align:center; text-shadow:0 3px 6px rgba(0,0,0,.6); }
+        .heading { font-size:2rem; font-weight:800; line-height:1.4; }
+        /* Grand finale title */
+        .grand-title{ font-size:5rem; letter-spacing:3px; text-transform:uppercase; color:var(--accent); text-shadow:0 6px 14px rgba(0,0,0,.8),0 0 15px rgba(0,209,255,.75); animation:pulse 3s infinite; }
+        @keyframes pulse{ 0%{transform:scale(1);} 50%{transform:scale(1.06);} 100%{transform:scale(1);} }
+        .subtitle{ font-size:1.3rem; font-weight:600; color:var(--accent); text-align:center; margin:0 0 1.2rem; letter-spacing:.5px; }
+        p, li{ font-size:1.6rem; font-weight:400; line-height:1.4; }
+        p{ text-align:center; max-width:900px; margin:0 auto 1.5rem; }
+        .note{ font-size:2rem; font-weight:bold; margin-top:1rem; color:#eee; }
+        /* slide container */
+        .step{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem; width:1200px; max-width:90vw; transition:opacity .8s ease-in-out; opacity:.15; }
+        .step.present{ opacity:1; }
+        /* images */
+        .step img{ width:90%; max-width:1100px; height:auto; margin-top:2rem; border-radius:18px; box-shadow:0 25px 45px rgba(0,0,0,.45); transition:transform .4s ease,box-shadow .4s ease; }
+        @media (hover:hover){ .step.present img:hover{ transform:translateY(-12px) scale(1.03); box-shadow:0 40px 70px rgba(0,0,0,.55);} }
+        .main h1::after{ content:""; display:block; width:140px; height:4px; background:var(--accent); margin:1rem auto 0; border-radius:2px; }
+        /* half layouts */
+        .right-half, .left-half{ flex-direction:row; gap:2rem; }
+        .right-half .text{ width:70%; text-align:left; }
+        .right-half img{ width:23%; }
+        .right-half.bigger img{ width:43%; }
+        .left-half img{ width:23%; }
+        .left-half .text{ width:70%; text-align:left; }
+        /* Q&A list */
+        .qa-list{ list-style:none; padding:0; margin:0; }
+        .qa-list li{ margin:0.8rem 0; background:#fff; color:#000; border-radius:8px; padding:0.8rem 1.2rem; box-shadow:0 3px 8px rgba(0,0,0,.4); }
+        .qa-q{ color:var(--accent); font-weight:700; }
+        .row-img{ display:flex; gap:2rem; justify-content:center; align-items:center; width:100%; margin-top:1.5rem; }
+        .row-img img{ width:45%; max-width:550px; margin-top:0; }
+        /* video wrapper */
+        .video-container{ position:relative; width:90%; max-width:1100px; padding-bottom:56.25%; border-radius:18px; overflow:hidden; box-shadow:0 25px 45px rgba(0,0,0,.45); }
+        .video-container iframe{ position:absolute; top:0; left:0; width:100%; height:100%; }
+        ul{ list-style:disc inside; padding-left:0; margin:0 auto 1.5rem; max-width:900px; }
+        .three-d ul{ list-style:none; padding:0; }
+        .three-d ul li{ background:#fff; color:#000; border-radius:8px; padding:0.6rem 1.4rem; margin:0.5rem 0; font-weight:600; position:relative; }
+        .three-d ul li::before{ content:"\2022"; color:var(--accent); font-size:2rem; position:absolute; left:-1.2rem; top:50%; transform:translateY(-50%); }
+    </style>
+</head>
+<body>
+<div id="impress">
+    <!-- Slide 1: Main -->
+    <div class="step main" data-x="0" data-y="0" data-scale="1">
+        <h1>Time Travel: Science or Science Fiction</h1>
+        <p class="subtitle">Presentation by Ishaan</p>
+        <img src="https://storage.googleapis.com/yk-cdn/photos/pdp/stephane-gil/the-time-travel-machine-1.jpg" alt="Time travel machine" />
+    </div>
+
+    <!-- Slide 2: Going Back in Time -->
+    <div class="step right-half" data-x="1000" data-y="0" data-rotate="90">
+        <div class="text">
+            <h1>Going Back in Time</h1>
+            <p>Time travel is mentioned in Greek and Hindu mythology, and the term became famous back in 1895 when H.G. Wells wrote the groundbreaking novel <em>The Time Machine</em>.</p>
+        </div>
+        <img src="https://m.media-amazon.com/images/I/515SZK4FE1L.jpg" alt="H G Wells The Time Machine cover" />
+    </div>
+
+    <!-- Slide 3: My Interview (Q1–Q3) -->
+    <div class="step left-half" data-x="2000" data-y="0">
+        <img src="https://ctu.ieee.org/wp-content/uploads/2023/11/Copy-of-untitled-12.png" alt="Interview" />
+        <div class="text">
+            <h1>My Interview</h1>
+            <p><strong>Interviewer:</strong> Dr. Navrati Saxena (Professor, San Jose State University)</p>
+            <ul class="qa-list">
+                <li><span class="qa-q">Q1:</span> <strong>Do you think Time Travel will ever be possible?</strong><br><em>A:</em> Yes, definitely, but if we find any worm holes. Maybe in the next 20 years</li>
+                <li><span class="qa-q">Q2:</span> <strong>Are there any real experiments in that direction?</strong><br><em>A:</em> Many! Researchers explore wormholes, quantum entanglement, and retro‑causality.</li>
+                <li><span class="qa-q">Q3:</span> <strong>If time travel is possible, where would you go?</strong><br><em>A:</em> I’d relive my childhood again.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 4: My Interview (Q4) -->
+    <div class="step right-half" data-x="3500" data-y="0">
+        <div class="text">
+            <h1>My Interview</h1>
+            <p><strong>Interviewer:</strong> Dr. Navrati Saxena (Professor, San Jose State University)</p>
+            <ul class="qa-list">
+                <li><span class="qa-q">Q4:</span> <strong>If I go back in time and change something and come back, will I have a memory of the old and present time?</strong><br>
+                    <em>A:</em> It depends on the model:
+                    <ul style="margin-top:0.6rem;">
+                        <li><strong>Single‑timeline theory:</strong> Changing the cause (e.g., the “grandfather paradox”) erases the reason you time‑traveled.</li>
+                        <li><strong> Multiverse/branching timelines:</strong> You’d keep memories from your original timeline because your consciousness came from it. The “you” in the new branch would not. Returning might land you in yet another close—but different—timeline.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <img src="https://ctu.ieee.org/wp-content/uploads/2023/11/Copy-of-untitled-12.png" alt="Interview" />
+    </div>
+
+    <!-- Slide 5: Movie Icons Question -->
+    <div class="step right-half bigger rotation" data-x="8000" data-y="0" data-rotate="90">
+        <div class="text">
+            <h1>Quiz Time <br/>How many Time Travel Movies do you know?</h1>
+        </div>
+        <img src="https://contentful.harrypotter.com/usf1vwtuqyxm/10PCK4YO7MDOxFAqd1KhQJ/ce147b6a5bdaeb216a4073ca91161621/time-turner_2_1800x1248.png" alt="Time‑travel movie icons collage" />
+    </div>
+
+    <!-- Slide 6: Is it possible? --> 
+    <div class="step three-d" data-x="5000" data-y="0" data-z="1000" data-rotate-y="40">
+        <h1>Is Time Travel Possible Today?</h1>
+        <p class="note">You can travel in the future 😀 <br/>(but not in your own 😔)</p>
+        <p>Before we understand how, let's understand:</p>
+        <ul>
+            <li>Atomic Clock - Highly synchronized clocks</li>
+            <li>Time Dilation - As you travel close to the speed of light (186,282 miles/s)</li>
+        </ul>
+    </div>
+
+    <!-- Slide 7: Atomic / Photon Clock -->
+    <div class="step" data-x="6000" data-y="0">
+        <h1>Atomic / Photon Clock</h1>
+        <div class="row-img">
+            <img src="https://static.scientificamerican.com/dam/m/3849d794e7221da6/original/sa0325Benn01.jpg?m=1739208234.829&w=1350" alt="Atomic clock illustration" />
+            <img src="https://www.einstein-online.info/wp-content/uploads/SRT_Lichtuhr_%C2%A9_Daniela_Leitner_Markus_Poessel_Einstein-Online.gif" alt="Photon clock animation" />
+        </div>
+    </div>
+
+    <!-- Slide 8: Time Dilation – Photon Clock (video) -->
+    <div class="step video" data-x="7000" data-y="0" data-scale="1">
+        <p class="heading">Time Dilation - Einstein's Special Theory Of Relativity</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/GguAN1_JouQ?start=186&end=297&autoplay=0&controls=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Slide 9: Questions & Kahoot Time -->
+    <div class="step three-d" data-x="9000" data-y="0" data-z="1000" data-rotate-y="40">
+        <h1 class="grand-title">Questions &amp; Kahoot Time</h1>
+    </div>
+</div>
+
+<script</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
+<script> impress().init(); </script>
+</body>
+</html>
