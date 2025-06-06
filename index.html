@@ -12,14 +12,16 @@
         :root{ --accent:#00d1ff; }
         html,body{ height:100%; margin:0; font-family:'Open Sans',Helvetica,Arial,sans-serif; background:radial-gradient(circle at 50% 20%, #12171f 0%, #0a0d13 80%); color:#fff; }
         h1{ font-size:3.5rem; font-weight:700; letter-spacing:1px; margin:0 0 .6rem; text-align:center; text-shadow:0 3px 6px rgba(0,0,0,.6); }
-        .heading { font-size:2rem; font-weight:800; line-height:1.4; }
-        /* Grand finale title */
+        /* Grand finale */
         .grand-title{ font-size:5rem; letter-spacing:3px; text-transform:uppercase; color:var(--accent); text-shadow:0 6px 14px rgba(0,0,0,.8),0 0 15px rgba(0,209,255,.75); animation:pulse 3s infinite; }
-        @keyframes pulse{ 0%{transform:scale(1);} 50%{transform:scale(1.06);} 100%{transform:scale(1);} }
+        @keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.06);}100%{transform:scale(1);} }
         .subtitle{ font-size:1.3rem; font-weight:600; color:var(--accent); text-align:center; margin:0 0 1.2rem; letter-spacing:.5px; }
         p, li{ font-size:1.6rem; font-weight:400; line-height:1.4; }
         p{ text-align:center; max-width:900px; margin:0 auto 1.5rem; }
         .note{ font-size:2rem; font-weight:bold; margin-top:1rem; color:#eee; }
+        .cite{ font-size:1.1rem; color:#ccc; text-align:center; margin-top:3rem; }
+        .cite a{ color:#8ec8ff; text-decoration:none; }
+        .cite a:hover{ text-decoration:underline; }
         /* slide container */
         .step{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem; width:1200px; max-width:90vw; transition:opacity .8s ease-in-out; opacity:.15; }
         .step.present{ opacity:1; }
@@ -29,20 +31,19 @@
         .main h1::after{ content:""; display:block; width:140px; height:4px; background:var(--accent); margin:1rem auto 0; border-radius:2px; }
         /* half layouts */
         .right-half, .left-half{ flex-direction:row; gap:2rem; }
-        .right-half .text{ width:70%; text-align:left; }
-        .right-half img{ width:23%; }
-        .right-half.bigger img{ width:43%; }
-        .left-half img{ width:23%; }
-        .left-half .text{ width:70%; text-align:left; }
+        .right-half .text, .left-half .text{ width:70%; text-align:left; }
+        .right-half img, .left-half img{ width:23%; }
         /* Q&A list */
         .qa-list{ list-style:none; padding:0; margin:0; }
         .qa-list li{ margin:0.8rem 0; background:#fff; color:#000; border-radius:8px; padding:0.8rem 1.2rem; box-shadow:0 3px 8px rgba(0,0,0,.4); }
         .qa-q{ color:var(--accent); font-weight:700; }
+        /* row images */
         .row-img{ display:flex; gap:2rem; justify-content:center; align-items:center; width:100%; margin-top:1.5rem; }
         .row-img img{ width:45%; max-width:550px; margin-top:0; }
-        /* video wrapper */
+        /* video */
         .video-container{ position:relative; width:90%; max-width:1100px; padding-bottom:56.25%; border-radius:18px; overflow:hidden; box-shadow:0 25px 45px rgba(0,0,0,.45); }
         .video-container iframe{ position:absolute; top:0; left:0; width:100%; height:100%; }
+        /* bullet styling */
         ul{ list-style:disc inside; padding-left:0; margin:0 auto 1.5rem; max-width:900px; }
         .three-d ul{ list-style:none; padding:0; }
         .three-d ul li{ background:#fff; color:#000; border-radius:8px; padding:0.6rem 1.4rem; margin:0.5rem 0; font-weight:600; position:relative; }
@@ -134,10 +135,32 @@
             <iframe src="https://www.youtube.com/embed/GguAN1_JouQ?start=186&end=297&autoplay=0&controls=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
+    
+    <!-- Slide 8.5: Traveling to the speed of light -->
+    <div class="step right-half" data-x="9500" data-y="0" data-z="2000">
+        <div class="text">
+            <h1>Why travelling close to the speed of light is important</h1>
+            <ul class="qa-list">
+                <li><span class="qa-q">Because:</span> Speed affects photons' traveling through your body as part of electrical pulses. The impact on the photons also affects the cell breakdown, which slows down your aging. You grow older slowly. 
+                </li>
+                <li><span class="qa-q">Iff:</span> You travel at 99.95% of the speed of light, travel for 5 years to our closest galaxy, Andromeda, and come back in the next 5 years, you would have aged by 10 years but on earth 29 years would have passed. You would come back to Earth in the year 2054. You would have arrived in your family's future where they would have aged by 29 years, and you would have aged only by 10 years.
+                </li>
+                <li><span class="qa-q">Iff:</span> You travel at 99.999% of the speed of light, and come back in 10 years, approximately 22360 years would have passed on Earth! Crazy, right?          
+                
+                <br/> <br/>This suggests, the faster you go, the slower time moves for you.
+                </li>
+            </ul>
+        </div>
+    </div>
 
-    <!-- Slide 9: Questions & Kahoot Time -->
+    <!-- Slide 9: Questions & Kahoot Time (3‑D grand) -->
     <div class="step three-d" data-x="9000" data-y="0" data-z="1000" data-rotate-y="40">
         <h1 class="grand-title">Questions &amp; Kahoot Time</h1>
+        <p class="cite">References:<br>
+            <a href="https://www.nist.gov/pml/time-and-frequency-division/time-services/atomic-clocks" target="_blank">NIST – Atomic&nbsp;Clocks</a> | 
+            <a href="https://www.nasa.gov/mission_pages/chandra/news/relativity.html" target="_blank">NASA – Relativity &amp; Time&nbsp;Dilation</a> | 
+            <a href="https://web.stanford.edu/group/cp-perezp/relativity.html" target="_blank">Stanford.edu – Relativity&nbsp;Primer</a>
+        </p>
     </div>
 </div>
 
